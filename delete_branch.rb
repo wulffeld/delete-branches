@@ -1,6 +1,15 @@
 #!/usr/bin/env ruby
 
-require 'tty-prompt'
+require "rubygems"
+
+real_path = File.realpath(__FILE__)
+script_dir = File.dirname(real_path)
+
+ENV["BUNDLE_GEMFILE"] = File.join(script_dir, "Gemfile")
+
+require "bundler/setup"
+
+Bundler.require
 
 def branches
   `git branch  --format="%(refname:short)"`.split("\n").reject { |b| ["master", "main", "staging", "test"].include?(b) }

@@ -4,15 +4,15 @@ A simple script to delete branches from your local git repository.
 
 ## Requirements
 
-Ruby and a globally installed [tty-prompt](https://github.com/piotrmurach/tty-prompt).
+* git
+* Ruby 3.x.
 
 ## Install
 
 ```
-  gem install tty-prompt
+  bundle install
 ```
 
-Then clone this repository and copy the script to a directory in your `$PATH`.
 
 ## Usage
 
